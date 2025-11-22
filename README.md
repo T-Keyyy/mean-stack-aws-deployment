@@ -112,8 +112,10 @@ docker-compose up -d --scale frontend=3
 
 3. **Access the application**
 - Frontend: http://localhost
-- Backend API: http://localhost:3000
+- Backend API: http://localhost/api
 - MongoDB: localhost:27017
+
+> **Note**: This is for local development. For production deployment on AWS, see [Deployment to AWS](#️-deployment-to-aws) section below.
 
 4. **Stop services**
 ```bash
@@ -179,7 +181,11 @@ sudo docker-compose ps
 
 ### Step 5: Access Your App
 
-Open browser to: `http://YOUR-EC2-PUBLIC-IP`
+**Production URL**: `http://YOUR-EC2-PUBLIC-IP`
+
+Example: http://18.118.159.237 (current deployment)
+
+The application is now **live on the internet** and accessible from anywhere!
 
 ## 📁 Project Structure
 
