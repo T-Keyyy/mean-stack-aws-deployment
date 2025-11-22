@@ -374,10 +374,6 @@ sudo docker-compose down -v
 
 This project is open source and available for educational purposes.
 
-## 🤝 Contributing
-
-Feel free to submit issues or pull requests!
-
 ## 📧 Contact
 
 Created for technical assessment demonstration.
