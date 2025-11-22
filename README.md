@@ -146,13 +146,13 @@ icacls mean-stack-key.pem /grant:r "$($env:USERNAME):(R)"
 icacls mean-stack-key.pem /inheritance:r
 
 # Connect via SSH
-ssh -i "mean-stack-key.pem" ubuntu@YOUR-EC2-PUBLIC-IP
+ssh -i "mean-stack-key.pem" ubuntu@MY-EC2-PUBLIC-IP
 ```
 
-**Mac/Linux:**
+**Mac/Linux**:
 ```bash
 chmod 400 mean-stack-key.pem
-ssh -i "mean-stack-key.pem" ubuntu@YOUR-EC2-PUBLIC-IP
+ssh -i "mean-stack-key.pem" ubuntu@MY-EC2-PUBLIC-IP
 ```
 
 ### Step 3: Install Docker
@@ -179,9 +179,9 @@ sudo docker-compose up -d --scale frontend=3
 sudo docker-compose ps
 ```
 
-### Step 5: Access Your App
+### Step 5: Access My App
 
-**Production URL**: `http://YOUR-EC2-PUBLIC-IP`
+**Production URL**: `http://MY-EC2-PUBLIC-IP`
 
 Example: http://18.118.159.237 (current deployment)
 
@@ -365,7 +365,7 @@ sudo docker-compose down -v
 
 **For Production:**
 - Use HTTPS with SSL certificate (Let's Encrypt)
-- Restrict SSH to your IP only
+- Restrict SSH to my IP only
 - Use environment variables for secrets
 - Enable AWS CloudWatch for monitoring
 - Regular security updates: `sudo apt update && sudo apt upgrade`
